@@ -1,9 +1,14 @@
+import { Header } from "@organisms/Header";
+
 function AllRecipes() {
 
     return (
-      <div>
-        <h1>Toutes les recettes :</h1>
-      </div>
+        <>
+        <Header />
+         <main>
+           <h1>Toutes les recettes :</h1>
+         </main>
+       </>
     )
   }
   

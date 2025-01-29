@@ -1,9 +1,14 @@
+import { Header } from "@organisms/Header";
+
 function HomePage() {
 
     return (
-      <div>
+    <>
+     <Header />
+      <main>
         <h1>Bienvenu</h1>
-      </div>
+      </main>
+    </>
     )
   }
   
