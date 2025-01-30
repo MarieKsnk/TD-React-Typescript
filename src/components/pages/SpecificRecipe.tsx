@@ -1,6 +1,6 @@
 import { Header } from "@organisms/Header";
 
-function SpecificRecipes() {
+export function SpecificRecipe() {
 
     return (
     <>
@@ -11,6 +11,3 @@ function SpecificRecipes() {
     </>
     )
   }
-  
-  export default SpecificRecipes;
-  

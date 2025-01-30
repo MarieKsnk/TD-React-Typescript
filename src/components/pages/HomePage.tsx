@@ -1,6 +1,6 @@
 import { Header } from "@organisms/Header";
 
-function HomePage() {
+export function HomePage() {
 
     return (
     <>
@@ -12,5 +12,5 @@ function HomePage() {
     )
   }
   
-  export default HomePage;
+
   

@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-import HomePage from './components/pages/HomePage'
-import AllRecipes from './components/pages/AllRecipes'
-import SpecificRecipe from './components/pages/SpecificRecipe'
+import { HomePage } from "@pages/HomePage";
+import { AllRecipes } from "@pages/AllRecipes";
+import { SpecificRecipe } from "@pages/SpecificRecipe";
 
 function App() {
 
