@@ -5,14 +5,15 @@ import { IRecipe } from "types/IRecipe";
 import { Button } from "@atoms/Button";
 import { useNavigate } from "react-router-dom";
 import { RecipeCard } from "@molecules/RecipeCard";
+import { useFavoriteStore } from "@store/useFavoriteStore";
 import "./globals.css"
 
 
 export function AllRecipes() {
 
   const { data: recipes, isLoading, isError, error, refetch } = useRecipes();
-
-  const navigate = useNavigate(); // A CHANGER PLUS SIMPLE ??
+  const { favorites, addFavorite, removeFavorite } = useFavoriteStore();
+  const isFavorite = favorites.some((fav) => fav.idMeal === recipe.idMeal);
 
   if (isLoading) {
     return<div>Chargement....</div>;
