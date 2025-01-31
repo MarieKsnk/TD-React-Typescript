@@ -1,24 +1,18 @@
 import { create } from "zustand";
-import { IRecipe } from "types/IRecipe";
+import { IFavorite } from "types/IFavorite";
 
 interface FavoriteStore {
-    favorites: IRecipe[];
-    addFavorite: (recipe: IRecipe) => void;
-    removeFavorite: (id: string) => void;
+    favorites: IFavorite[];
+    toggleFavorite: (recipe: IFavorite) => void;
 }
 
-export const useFavoriteStore = create<FavoriteStore>((set, get) => ({
-    favorites: [],
-  
-    addFavorite: (recipe) => {
+export const useFavoriteStore = create<FavoriteStore>((set) => ({
+  favorites: [],
+
+  toggleFavorite: (recipe) =>
       set((state) => ({
-        favorites: [...state.favorites, recipe], 
-      }));
-    },
-  
-    removeFavorite: (id) => {
-      set((state) => ({
-        favorites: state.favorites.filter((recipe) => recipe.idMeal !== id), 
-      }));
-    },
-  }));
+          favorites: state.favorites.some((fav) => fav.idMeal === recipe.idMeal)
+              ? state.favorites.filter((fav) => fav.idMeal !== recipe.idMeal)
+              : [...state.favorites, recipe],
+      })),
+}));

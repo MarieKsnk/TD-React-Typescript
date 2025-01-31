@@ -12,8 +12,6 @@ import "./globals.css"
 export function AllRecipes() {
 
   const { data: recipes, isLoading, isError, error, refetch } = useRecipes();
-  const { favorites, addFavorite, removeFavorite } = useFavoriteStore();
-  const isFavorite = favorites.some((fav) => fav.idMeal === recipe.idMeal);
 
   if (isLoading) {
     return<div>Chargement....</div>;
