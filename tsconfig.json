@@ -19,7 +19,8 @@
       "@store/*": ["store/*"],
       "@hooks/*": ["hooks/*"],
       "@api/*": ["api/*"],
-      "@types/*": ["types/*"]
+      "@types/*": ["types/*"],
+      "@styles/*": ["styles/*"]
     }
   },
   "include": ["src"],

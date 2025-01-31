@@ -1,9 +1,28 @@
-
 header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  background-color: rgb(208, 142, 0);
+  align-items: center;
+  background:black;
   padding: 15px 20px;
   color: white;
+}
+
+.logo a {
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+nav ul {
+  list-style: none;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
 }

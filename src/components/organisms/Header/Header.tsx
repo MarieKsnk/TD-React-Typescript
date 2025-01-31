@@ -4,13 +4,13 @@ import "./Header.css"
 export const Header = () => {
     return (
         <header>
+            <div className="logo">
+                <Link to="/">THE MEAL DB TP</Link>
+            </div>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li>
-                        <Link to="/recettes">Toutes les recettes</Link>
+                        <Link to="/recettes">Voir toutes les recettes</Link>
                     </li>
                 </ul>
             </nav>

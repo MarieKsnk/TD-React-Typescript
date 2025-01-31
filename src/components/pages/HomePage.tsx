@@ -1,5 +1,7 @@
 import { Header } from "@organisms/Header";
 import { Button } from "@atoms/Button";
+import { Link } from "react-router-dom";
+import "./globals.css"
 
 export function HomePage() {
 
@@ -7,8 +9,10 @@ export function HomePage() {
     <>
      <Header />
       <main>
-        <h1>Bienvenu</h1>
-        <Button label="Voir toutes les recettes" />
+        <h1 className="title">Bienvenu</h1>
+        <Link to="/recettes">
+          <Button label="Voir toutes les recettes" />
+        </Link>
       </main>
     </>
     )

@@ -4,6 +4,8 @@ import { useRecipes } from "@hooks/useRecipes";
 import { IRecipe } from "types/IRecipe";
 import { Button } from "@atoms/Button";
 import { useNavigate } from "react-router-dom";
+import { RecipeCard } from "@molecules/RecipeCard";
+import "./globals.css"
 
 
 export function AllRecipes() {
@@ -25,16 +27,17 @@ export function AllRecipes() {
         <>
         <Header />
          <main>
-           <h1>Toutes les recettes :</h1>
-           <ul>
+           <h1 className="title">Toutes les recettes</h1>
+           <div className="recipes-grid">
             {recipes?.map((recipe: IRecipe) => (
-              <li key={recipe.idMeal}>
-                <h1>{recipe.strMeal}</h1>
-                <img src={recipe.strMealThumb} alt={recipe.strMeal} width="200px" />
-                <Button label="Voir la recette"  onClick={() => navigate(`/recette/${recipe.idMeal}`)} />
-              </li>
+              <RecipeCard 
+              key={recipe.idMeal}
+              id={recipe.idMeal}
+              title={recipe.strMeal}
+              image={recipe.strMealThumb}
+              />
             ))}
-           </ul>
+            </div>
          </main>
        </>
     )

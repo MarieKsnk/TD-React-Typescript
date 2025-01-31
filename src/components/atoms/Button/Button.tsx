@@ -1,5 +1,5 @@
 import { IButtonProps } from "./Button.props";
-import './Button.css';
+import "./Button.css";
 
 export const Button: React.FC<IButtonProps> = ({ label, onClick, disabled }) => {
     return (
