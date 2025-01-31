@@ -1,11 +1,16 @@
 import React from "react";
 import { Header } from "@organisms/Header";
 import { useRecipes } from "@hooks/useRecipes";
+import { IRecipe } from "types/IRecipe";
+import { Button } from "@atoms/Button";
+import { useNavigate } from "react-router-dom";
 
 
 export function AllRecipes() {
 
   const { data: recipes, isLoading, isError, error, refetch } = useRecipes();
+
+  const navigate = useNavigate(); // A CHANGER PLUS SIMPLE ??
 
   if (isLoading) {
     return<div>Chargement....</div>;
@@ -22,10 +27,11 @@ export function AllRecipes() {
          <main>
            <h1>Toutes les recettes :</h1>
            <ul>
-            {recipes?.map((recipe: any) => (
+            {recipes?.map((recipe: IRecipe) => (
               <li key={recipe.idMeal}>
-                <img src={recipe.strMealThumb} alt={recipe.strMeal} width="100px" />
-                <p>{recipe.strMeal}</p>
+                <h1>{recipe.strMeal}</h1>
+                <img src={recipe.strMealThumb} alt={recipe.strMeal} width="200px" />
+                <Button label="Voir la recette"  onClick={() => navigate(`/recette/${recipe.idMeal}`)} />
               </li>
             ))}
            </ul>
