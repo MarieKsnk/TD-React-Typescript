@@ -6,7 +6,7 @@ Voici mon TD, pas totalement abouti, toutefois j'ai tenté d'intègrer la plupar
 - Page des recettes → Liste complète des recettes via l'API, possibilité d'ajout/suppression de favoris
 - Page d'une recette → Affichage détaillé d’une recette via son ID, renvoi vers toutes les recettes ou l'accueil
 
-Fonctionnalités implémentées :
+// Fonctionnalités implémentées :
 
 - Affichage de toutes les recettes grâce à l'API TheMealDB
 - Affichage d'une recette en particulier en utilisant son ID
