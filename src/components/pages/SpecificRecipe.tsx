@@ -2,6 +2,9 @@ import { Header } from "@organisms/Header";
 import { useParams } from "react-router-dom";
 import { useSpecificRecipe } from "@hooks/useSpecificRecipe";
 import { SpecificRecipeCard } from "@molecules/SpecificRecipeCard";
+import { Link } from "react-router-dom";
+import { Button } from "@atoms/Button";
+import "./globals.css"
 
 export function SpecificRecipe() {
 
@@ -36,13 +39,23 @@ export function SpecificRecipe() {
     <>
         <Header />
          <main>
-          <SpecificRecipeCard 
-          title={recipe.strMeal}
-          image={recipe.strMealThumb}
-          ingredients={ingredients}
-          measures={measures}
-          instructions={recipe.strInstructions}
-          />
+          <div className="specific-recip-card">
+            <SpecificRecipeCard 
+              title={recipe.strMeal}
+              image={recipe.strMealThumb}
+              ingredients={ingredients}
+              measures={measures}
+              instructions={recipe.strInstructions}
+            />
+          </div>
+          <div className="buttons">
+            <Link to="/recettes">
+              <Button label="Voir toutes les recettes" />
+            </Link>
+            <Link to="/">
+              <Button label="Retour a l'accueil" />
+            </Link>
+          </div>
          </main>
     </>
     )
